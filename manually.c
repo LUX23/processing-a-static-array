@@ -30,7 +30,8 @@ int man()
         printf("\n");
     }
     
-    double a, k, m;
+    double k, m,
+           a = 0;
     double vec[n];
     for (int j = 0; j < n; j++) // среднее арифметическое по столбцам
     {
