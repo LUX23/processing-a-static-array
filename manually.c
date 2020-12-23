@@ -1,7 +1,7 @@
 //Размер и значения массива вводит пользователь
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>ы
+#include <locale.h>
 
 int man()
 {
