@@ -30,7 +30,7 @@ int aut()
     printf("\n\tВектор:");
     double vec[3] = {m1, m2, m3};
     k = vec[0];
-    
+    s
     for (int j = 0; j < 3; j++)
     {
         printf("\t%.2f ", vec[j]);
