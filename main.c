@@ -12,7 +12,7 @@ int main()
     setlocale(LC_CTYPE,"RUSSIAN");
     srand(time(NULL));
     
-    int n, p;
+    int p;
     
     printf("Выберите метод ввода значений и размерности матрицы:\n"
            "\t1 - В программе будут заданные значения.\n"
