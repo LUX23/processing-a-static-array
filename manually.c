@@ -1,14 +1,13 @@
 // Размер и значения массива вводит пользователь
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 
 int man()
 {
     int n;
     printf("\tСоздание матрицы размером n*n. Введите значение n: ");
     scanf("%d", &n);
-    
+
     int arr[n][n];
     printf("\n\tВведите значения матрицы:");
     for (int i = 0; i < n; i++)
@@ -19,7 +18,7 @@ int man()
             scanf("%d", &arr[i][j]);
         }
     }
-    
+
     printf("\n\tМатрица:\n");
     for (int i = 0; i < n; i++)
     {
@@ -29,20 +28,20 @@ int man()
         }
         printf("\n");
     }
-    
-    double k, m, a = 0, vec[n];
+
+    float k, m, a, vec[n];
     for (int j = 0; j < n; j++) // среднее арифметическое по столбцам
     {
+        a = 0;
         for (int i = 0; i < n; i++)
         {
             if(i != j) // исключая элемент на главной диагонали
             a += arr[i][j]; // сумма элементов столбца
         }
-        m = a / n; // среднее арифметическое столбца
+        m = a / (n - 1); // среднее арифметическое столбца
         vec[j] = m;
-        a = 0;
     }
-    
+
     printf("\n\tВектор:");
     k = vec[0];
     for (int j = 0; j < n; j++)
@@ -51,9 +50,9 @@ int man()
         if (k > vec[j]) // поиск минимального элемента вектора
         k = vec[j];
     }
-    
+
     printf("\n\tМинимальный элемент вектора = ");
     printf("%.2f", k);
-    
+
     return(0);
 }
